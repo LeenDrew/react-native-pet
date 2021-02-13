@@ -38,7 +38,9 @@ export default function App() {
 								<Text>{item.auditorium}</Text>
 								<Text>{item.beginLesson}</Text>
 								<Text>{item.endLesson}</Text>
-								{item.stream ? <Text>{item.stream}</Text> : <Text>{item.subGroup}</Text>}
+								{item.stream && <Text>{item.stream}</Text>}
+								{item.subGroup && <Text>{item.subGroup}</Text>}
+								{item.group && <Text>{item.group}</Text>}
 							</View>
 						))}
 				</ScrollView>
