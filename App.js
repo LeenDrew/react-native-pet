@@ -5,10 +5,15 @@ import axios from 'axios';
 export default function App() {
 	const [lessonsList, setLessonsList] = useState([]);
 
+	const fetchLessons = async () => {
+		const result = await axios.get(
+			'https://rasp.omgtu.ru/api/schedule/group/513?start=2021.02.15&finish=2021.02.28&lng=1',
+		);
+		setLessonsList(result.data);
+	};
+
 	useEffect(() => {
-		axios
-			.get('https://rasp.omgtu.ru/api/schedule/group/513?start=2021.02.15&finish=2021.02.21&lng=1')
-			.then((response) => setLessonsList(response.data));
+		fetchLessons();
 	}, []);
 
 	return (
