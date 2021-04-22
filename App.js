@@ -22,7 +22,7 @@ export default function App() {
 			<SafeAreaView>
 				<ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.scrollView}>
 					<View style={styles.container}>
-						<Text style={styles.screenTitle}>Расписание</Text>
+						<Text style={styles.screenTitle}>Расписание1</Text>
 					</View>
 					{lessonsList &&
 						lessonsList.map((item) => (
