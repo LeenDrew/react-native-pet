@@ -17,7 +17,9 @@ export default function App() {
 	}, []);
 
 	return (
+		
 		<>
+		<Text>123</Text>
 			<StatusBar />
 			<SafeAreaView>
 				<ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.scrollView}>
@@ -27,6 +29,7 @@ export default function App() {
 					{lessonsList &&
 						lessonsList.map((item) => (
 							<View
+							
 								key={
 									item.date +
 									item.disciplineOid +
